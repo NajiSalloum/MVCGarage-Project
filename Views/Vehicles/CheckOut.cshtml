@@ -1,0 +1,48 @@
+﻿@model MVCGarage2.Models.VehicleCheckOut
+
+@{
+    ViewBag.Title = "Check out";
+}
+
+<h2>Check out</h2>
+
+<h3>Are you sure you want to check out the vehicle with regnr @Model.Regnr?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Regnr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Regnr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NowTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NowTime)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("Receipt", "Vehicles")) {
+        @Html.AntiForgeryToken()
+
+        @Html.HiddenFor(model => model.Id)
+        <div class="form-actions no-color">
+            <input type="submit" value="Check out" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Overview")
+        </div>
+    }
+</div>

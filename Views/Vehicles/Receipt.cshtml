@@ -1,0 +1,74 @@
+﻿@model MVCGarage2.Models.VehicleReceipt
+
+@Styles.Render("~/Content/receipt-css")
+
+@{
+    ViewBag.Title = "Receipt";
+}
+
+<h2>Receipt</h2>
+
+<div>
+    <h4>Check out receipt</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Regnr)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Regnr)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkedTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkedTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NowTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NowTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    <span  class="hidden-print">
+        <button class="printout btn btn-success">Print</button> |
+        @Html.ActionLink("To List", "Overview")
+    </span>
+</p>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/vehicleprintout")
+}

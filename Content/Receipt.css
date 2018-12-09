@@ -1,0 +1,43 @@
+﻿/*
+    Copy from Bootstrap, add styling for printouts
+*/
+@media only print {
+    h2, h4 {
+        width: 260px;
+        text-align: center;
+    }
+
+    .dl-horizontal dt {
+        float: left;
+        width: 120px;
+        overflow: hidden;
+        clear: left;
+        text-align: right;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .dl-horizontal dd {
+        margin-left: 140px;
+    }
+
+    .dl-horizontal dd:before,
+    .dl-horizontal dd:after {
+        display: table;
+        content: " ";
+    }
+
+    .dl-horizontal dd:after {
+        clear: both;
+    }
+
+    .dl-horizontal dd:before,
+    .dl-horizontal dd:after {
+        display: table;
+        content: " ";
+    }
+
+    .dl-horizontal dd:after {
+        clear: both;
+    }
+}

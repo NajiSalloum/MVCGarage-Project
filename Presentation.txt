@@ -1,0 +1,45 @@
+﻿Home
+  Font
+  (Special _Layout because of blue and for testing (could have used JS or load an extra css))
+  Flexboxing to center content
+.
+
+List (Overview) A
+  (Special model)
+  Sort links with glyphicons
+  Pageing
+  (Functionality of search)
+.
+
+Reg (Pre-CheckIn)
+  Autofocus
+  Dropdowns
+  Decimal fields
+  Validation (Special min/max Length + step)
+  Default values through model
+  (Web.config -> culture = auto)
+
+Park (Parked, CheckIn)
+.
+
+Search A
+  Autofocus
+  Dropdowns
+  Autocomplete
+  Validation
+  JS-script auto-check checkbox
+  JS-script
+.
+
+Details
+.
+
+Check out (pre-)
+  Button (yay)
+
+Receipt
+  (show formating through UIHint-attribute)
+  Print button (JS-script)
+  Print style
+  Print-hidden fields
+.

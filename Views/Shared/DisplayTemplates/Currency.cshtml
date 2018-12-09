@@ -1,0 +1,6 @@
+﻿@model double
+@{
+    var numinfo = new System.Globalization.NumberFormatInfo();
+    numinfo.NumberDecimalSeparator = ",";
+}
+<nobr>@Model.ToString("# ### ### ##0.00", numinfo)<i> kr</i></nobr>
